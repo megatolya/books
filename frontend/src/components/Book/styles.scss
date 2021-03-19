@@ -1,33 +1,33 @@
 .book {
-    display: flex;
-    flex-direction: column;
-    padding: 40px 20px;
-    width: 100%;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  width: 100%;
+  align-items: center;
 
-    &__title {
-        text-align: center;
-        color: #505050;
-        text-decoration: underline;
-        margin-bottom: 20px;
-    }
+  &__title {
+    text-align: center;
+    color: #505050;
+    text-decoration: underline;
+    margin-bottom: 20px;
+  }
 
-    &__image {
-        object-fit: contain;
-        max-width: 240px;
-        max-height: 360px;
-        margin-bottom: 20px;
-    }
+  &__image {
+    object-fit: contain;
+    max-width: 240px;
+    max-height: 360px;
+    margin-bottom: 20px;
+  }
 
-    &__year {
-        margin-bottom: 20px;
-    }
+  &__year {
+    margin-bottom: 20px;
+  }
 
-    &__description {
-        max-width: 700px;
-        font-size: 17px;
-        font-family: arial;
-        line-height: 28px;
-        text-align: justify;
-    }
+  &__description {
+    max-width: 700px;
+    font-size: 17px;
+    font-family: arial;
+    line-height: 28px;
+    text-align: justify;
+  }
 }

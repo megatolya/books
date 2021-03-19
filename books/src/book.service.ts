@@ -4,23 +4,23 @@ import books from './database';
 
 export interface ISumOfArray {
   sum: number;
-};
+}
 
 export interface IBookShort {
-  id: string,
-  title: string,
-  image: string
-};
+  id: string;
+  title: string;
+  image: string;
+}
 
 export interface IBookFull extends IBookShort {
-  description: string
-  year: string,
-};
+  description: string;
+  year: string;
+}
 
 const shortify = (book: IBookFull): IBookShort => ({
   id: book.id,
   title: book.title,
-  image: book.image
+  image: book.image,
 });
 
 @Injectable()
@@ -39,7 +39,7 @@ export class BookService {
 
   getSum(nums: number[]): { sum: number } {
     return {
-      sum: nums.reduce((sum, num) => sum + num, 0)
+      sum: nums.reduce((sum, num) => sum + num, 0),
     };
   }
-};
+}

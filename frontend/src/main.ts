@@ -7,9 +7,6 @@ import { NestExpressApplication } from '@nestjs/platform-express';
 
 import { AppModule } from './app.module';
 
-
-
-
 (async function () {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   app.useStaticAssets(join(__dirname, '..', 'public'));

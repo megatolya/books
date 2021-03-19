@@ -6,17 +6,17 @@ import * as ReactDOMServer from 'react-dom/server';
 import App from './components/App';
 import { create } from './utils/context';
 
-import type {AppState} from './client';
+import type { AppState } from './client';
 
 interface IReactAppTemplateData {
   reactApp: string;
   initialState: string;
-};
+}
 
 export enum Page {
   main,
-  book
-};
+  book,
+}
 
 interface IPageParams {
   initialState: AppState;
@@ -25,14 +25,14 @@ interface IPageParams {
 @Injectable()
 export class ReactService {
   renderApp(params: IPageParams): IReactAppTemplateData {
-    const {Provider} = create(params.initialState);
+    const { Provider } = create(params.initialState);
     return {
       reactApp: ReactDOMServer.renderToString(
         <Provider initialState={params.initialState}>
           <App />
-        </Provider>
+        </Provider>,
       ),
-      initialState: JSON.stringify(params.initialState)
+      initialState: JSON.stringify(params.initialState),
     };
   }
 }

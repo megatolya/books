@@ -12,14 +12,14 @@ export class AppController {
   constructor(private readonly books: BookService) {}
 
   @GrpcMethod('AppController', 'getBookById')
-  getBookById({id}: {id: string}): IBookFull {
+  getBookById({ id }: { id: string }): IBookFull {
     return this.books.getBookById(id);
   }
 
   @GrpcMethod('AppController', 'getBooks')
-  getBooks(): {books: IBookShort[]} {
+  getBooks(): { books: IBookShort[] } {
     return {
-      books: this.books.getBooks()
+      books: this.books.getBooks(),
     };
   }
 }

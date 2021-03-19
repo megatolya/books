@@ -1,43 +1,42 @@
-
 .book-snippet {
-    margin: 30px;
-    height: 324px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid;
-    width: 212px;
-    transition: border-bottom-color 0.2s ease-in-out;
-    
-    &:link,
-    &:visited,
-    &:hover,
-    &:active {
-        border: none;
-        border-bottom: 2px solid transparent;
-        color: black;
-        text-decoration: none;
-    }
+  margin: 30px;
+  height: 324px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  width: 212px;
+  transition: border-bottom-color 0.2s ease-in-out;
 
-    &:hover {
-        border-bottom-color: black;
-    }
-    
-    &__image {
-        height: calc(100% - 40px);
-        width: auto;
-        object-fit: contain;
-        transition: transform 0.2s ease-in-out;
-    }
-    
-    &:hover &__image {
-        transform: scale(1.01);
-    }
-    
-    &__title {
-        margin: 10px;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-    }
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: black;
+    text-decoration: none;
+  }
+
+  &:hover {
+    border-bottom-color: black;
+  }
+
+  &__image {
+    height: calc(100% - 40px);
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &:hover &__image {
+    transform: scale(1.01);
+  }
+
+  &__title {
+    margin: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }
