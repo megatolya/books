@@ -31,7 +31,10 @@ npm start
 ## TODO
 
 Error handling on frontend server
+
 Dockerize project + consider production env
+
 Better test cases for BookService
+
 Fix test cases for frontend (with separate webpack config or fixing `nest start`)
 
