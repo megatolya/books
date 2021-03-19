@@ -28,7 +28,7 @@ interface IReactPage {
   reactApp: string;
 }
 
-// TODO should it be common?
+// TODO move to build config
 const microserviceOptions: ClientOptions = {
   transport: Transport.GRPC,
   options: {
@@ -78,7 +78,7 @@ export class AppController implements OnModuleInit {
     try {
       book = await this.booksService.getBookById({ id: bookId }).toPromise();
     } catch (err) {
-      console.log(err, '<<<<<,');
+      console.log(err);
     }
 
     return this.reactService.renderApp({
@@ -87,11 +87,5 @@ export class AppController implements OnModuleInit {
         book,
       },
     });
-  }
-
-  @Post('test-sum')
-  async accumulate(@Body('data') data: number[]) {
-    this.logger.log('accumulate called on client with: ' + data);
-    return this.booksService.accumulate({ data });
   }
 }
