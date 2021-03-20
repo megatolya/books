@@ -25,6 +25,7 @@ And in separate tab react frontend:
 ```
 cd frontend/
 npm install
+./node_modules/.bin/webpack
 npm start
 ```
 
