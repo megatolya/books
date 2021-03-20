@@ -1,4 +1,4 @@
-## Idea
+## Idea and execution
 
 I decided to try nest.js. 
 
